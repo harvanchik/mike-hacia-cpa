@@ -18,22 +18,11 @@ module.exports = {
         800: "#0f4880",
         900: "#092b4c",
       },
-      secondary: {
-        DEFAULT: "#d1d1d1",
-        50: "#f6f6f6",
-        100: "#f1f1f1",
-        200: "#e8e8e8",
-        300: "#dfdfdf",
-        400: "#d6d6d6",
-        500: "#d1d1d1",
-        600: "#bcbcbc",
-        700: "#929292",
-        800: "#696969",
-        900: "#3f3f3f",
-      },
-      gray: {
-        gray: colors.gray
-      }
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      gray: colors.gray
     },
     extend: {
       fontFamily: {
