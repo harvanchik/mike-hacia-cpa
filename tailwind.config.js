@@ -37,8 +37,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        markazi: ["'Markazi Text'", 'serif'],
-        montserrat: ["'Montserrat'", 'sans-serif']
+        serif: ["'Markazi Text'", 'serif'],
+        sans: ["'Montserrat'", 'sans-serif']
       }
     },
   },
