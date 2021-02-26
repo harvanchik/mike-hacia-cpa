@@ -21,11 +21,11 @@
     <script src="https://kit.fontawesome.com/4f831b6978.js" crossorigin="anonymous" defer></script>
 </head>
 
-<body class="bg-gray-50">
-    <div class="flex w-full h-full bg-gray-50 p-16">
+<body id="body" class="flex flex-col bg-primary-600 xl:bg-gray-50">
+    <div class="flex w-full h-screen bg-gray-50 xl:p-16">
         <div class="self-center flex flex-row w-full h-full">
             <!-- Navigation Sidebar -->
-            <div class="flex flex-col justify-between md:my-10 w-16 py-5 bg-gradient-to-b from-primary-300 to-primary-800">
+            <div class="hidden xl:flex flex-col justify-between md:my-10 w-16 py-5 bg-gradient-to-b from-primary-300 to-primary-800">
                 <div class="self-center">
                     <a href="./">
                         <img src="./assets/images/logo.png" alt="mike hacia logo" class="w-14">
@@ -49,24 +49,19 @@
                 <div id="bottom-placeholder"></div>
             </div>
             <!-- Picture of Mike -->
-            <div class="w-3/12 bg-cover bg-center hidden flex-col justify-end shadow-xl md:flex lg:flex xl:flex"
+            <div class="hidden xl:flex w-3/12 bg-cover bg-center flex-col justify-end shadow-xl"
                  style="background-image: url('./assets/images/hacia.jpg'); transform: scaleX(-1);">
             </div>
             <!-- Main Content -->
-            <div class="w-full md:w-8/12 lg:w-8/12 xl:w-8/12 md:my-10  bg-gradient-to-b from-primary-400 to-primary-600">
-                <div class="p-6 lg:p-10 max-h-full overflow-y-auto scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch">
+            <div class="w-full xl:w-8/12 bg-gradient-to-b from-primary-400 to-primary-600">
+                <div class="p-6 lg:p-10 max-h-full scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch">
                     <div class="text-white">
-                        <div class="flex flex-col sm:flex-row md:hidden lg:hidden xl:hidden mb-4">
-                            <div class="h-24 w-24 rounded-full bg-cover mr-4 inline-block" style="background-image: url('./assets/images/hacia.jpg')"></div>
-                            <div class="text-left">
-                                <h1 class="text-lg">Michael J. Hacia</h1>
-                                <div class="text-gray-600">Software Engineer (AWS Certified)</div>
-                                <div class="text-gray-600">English / Portuguese / Spanish</div>
-                                <div class="flex flex-row mt-2 space-x-2"><a rel="noopener noreferrer" href="https://www.linkedin.com/in/leandrohoffmann/?locale=en_US" target="_blank"><img class="w-6 h-6" src="./assets/svg/linkedin-brands.svg" alt="LinkedIn"> </a><a rel="noopener noreferrer" href="https://github.com/lehno" target="_blank"><img class="w-6 h-6" src="./assets/svg/github-square-brands.svg" alt="Github"> </a><a rel="noopener noreferrer" href="https://medium.com/@lehno" target="_blank"><img class="w-6 h-6" src="./assets/svg/medium-brands.svg" alt="Medium"></a></div>
-                            </div>
+                        <div id="title" class="flex flex-row flex-wrap">
+                            <img src="./assets/images/hacia.jpg" class="flex xl:hidden rounded-full my-auto py-auto h-32 max-h-32 min-w-32 w-32 object-cover mr-4" alt="mike hacia profile">
+                            <h1 class="text-6xl md:text-7xl lg:text-8xl font-serif mt-3 sm:my-auto">Michael J. Hacia, CPA</h1>
                         </div>
-                        <h1 class="text-8xl font-serif">Michael J. Hacia, CPA</h1>
-                        <h2 class="text-2xl text-green-400 mt-5">A California Certified Public Accountant since 1992</h2>
+                        <h2 class="text-2xl mt-5">A California Certified Public Accountant since 1992</h2>
+                        <h3 class="flex xl:hidden text-lg mt-2">Licensed in California & Nevada</h3>
                         <p class="text-justify font-light mt-4">
                             Before starting my career in tax, I served seven years in the California Air National Guard and saw active duty in the Persian Gulf with the USAF during Operation Desert Shield and Operation Desert Storm.
                             <br><br>
@@ -75,19 +70,19 @@
                             In 2008, I was the tax partner of a large privately-held business management firm in Los Angeles where I specialized in complex tax concerns encompassing clients in the entertainment industry and small-to-mid-market business enterprises.
                         </p>
                         <hr class="mt-5 w-2/3 border-gray-200">
-                        <div class="mt-5">
+                        <div class="flex flex-col sm:flex-row sm:space-x-7 space-y-2 sm:space-y-0 my-5">
                             <!-- <a href="mailto:mike@mhaciacpa.com" class="bg-gray-100 text-primary-800 hover:bg-primary-800 hover:text-gray-50 transition duration-200 py-2 px-4 rounded">Reach me by email</a> -->
                             <span class="font-bold text-lg">Email:
                                 <a href="mailto:mike@mhaciacpa.com" target="_blank" class="font-normal hover:text-primary-800 transition duration-200 text-base my-auto">
                                     mike@mhaciacpa.com
                                 </a>
                             </span>
-                            <span class="ml-5 font-bold text-lg">Tel:
+                            <span class="font-bold text-lg">Tel:
                                 <a href="tel:+15628442222" class="font-normal hover:text-primary-800 transition duration-200 text-base my-auto">
                                     (562) 844-2222
                                 </a>
                             </span>
-                            <span id="social-media" class="my-auto ml-5 font-bold text-lg">Social:
+                            <span id="social-media" class="my-auto font-bold text-lg">Social:
                                 <a href="http://" target="_blank">
                                     <i class="fab fa-lg fa-facebook-square ml-2 text-gray-50 hover:text-primary-700 transition duration-200 cursor-pointer"></i>
                                 </a>
@@ -95,19 +90,24 @@
                                     <i class="fab fa-lg fa-linkedin ml-2 text-gray-50 hover:text-primary-700 transition duration-200 cursor-pointer"></i>
                                 </a>
                             </span>
+
                         </div>
-                        <div class="mt-6 -m-6 italic float-right text-sm">
+                        <div class="flex xl:hidden mt-7 pb-2 justify-center">
+                            <i class="fas fa-pencil-alt my-auto mr-1"></i>
+                            Site created by&nbsp;
+                            <a href="http://harvanchik.me" target="_blank" class="hover:text-primary-600">Jake Harvanchik</a>
+                        </div>
+                        <div class="hidden xl:flex mt-10 lg:mt-6 lg:-m-6 italic float-right text-md">
                             Licensed in California & Nevada
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <span class="flex fixed bottom-3 right-3 text-gray-500">
+        <span class="hidden xl:flex fixed bottom-3 right-3 text-gray-500">
             <i class="fas fa-pencil-alt my-auto mr-1"></i>
             Site created by&nbsp;
             <a href="http://harvanchik.me" target="_blank" class="hover:text-primary-600">Jake Harvanchik</a>
-        </span>
     </div>
 </body>
 
